@@ -2,6 +2,10 @@
 
 Welcome to the Potato Disease Classification project! This repository contains a Convolutional Neural Network (CNN) model trained to classify potato diseases into three main categories: Early blight, Late blight, and Healthy.
 
+## Streamlit App
+
+You can view the Streamlit app for potato disease classification [here](https://potato-disease-classification-cnn.streamlit.app/).
+
 ## Overview
 
 Potato is one of the most important food crops worldwide. However, it is susceptible to various diseases that can significantly impact yield and quality. Early detection and classification of these diseases are crucial for timely intervention and effective management.
@@ -27,9 +31,6 @@ Example code snippet (Python):
 ```python
 # Load the trained model
 model = load_model('potatoes_CNN.h5')
-
-# Preprocess input image
-# input_img = preprocess_input(image)
 
 # Obtain predictions
 # predictions = model.predict(input_img)
