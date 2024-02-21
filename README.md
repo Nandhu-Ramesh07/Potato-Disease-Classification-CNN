@@ -16,8 +16,6 @@ The model was trained using a dataset of potato images containing examples of ea
 
 ## Model Architecture
 
-## Model Architecture
-
 The Convolutional Neural Network (CNN) model used for potato disease classification consists of the following layers:
 
 1. **Convolutional Layers**: The model starts with a sequence of convolutional layers, each followed by a rectified linear unit (ReLU) activation function. These layers are responsible for detecting various features in the input images. The first convolutional layer has 32 filters with a kernel size of (3, 3), and subsequent layers increase the number of filters to capture more complex patterns.
