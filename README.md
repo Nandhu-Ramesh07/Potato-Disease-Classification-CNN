@@ -16,7 +16,23 @@ The model was trained using a dataset of potato images containing examples of ea
 
 ## Model Architecture
 
-The CNN model architecture consists of [describe your model architecture here]. The model was trained using transfer learning on a pre-trained network to leverage features learned from a large dataset and fine-tuned on the potato disease dataset.
+## Model Architecture
+
+The Convolutional Neural Network (CNN) model used for potato disease classification consists of the following layers:
+
+1. **Convolutional Layers**: The model starts with a sequence of convolutional layers, each followed by a rectified linear unit (ReLU) activation function. These layers are responsible for detecting various features in the input images. The first convolutional layer has 32 filters with a kernel size of (3, 3), and subsequent layers increase the number of filters to capture more complex patterns.
+
+2. **Dropout Layers**: Dropout layers are added after each convolutional layer to reduce overfitting by randomly dropping a fraction of the input units during training. A dropout rate of 0.5 is applied in each layer.
+
+3. **Max Pooling Layers**: Max pooling layers are interspersed between the convolutional layers to downsample the feature maps, retaining the most important information while reducing the spatial dimensions. Each max pooling layer has a pooling size of (2, 2).
+
+4. **Flatten Layer**: After the convolutional layers, the feature maps are flattened into a one-dimensional array using a flatten layer. This prepares the data for input into the fully connected layers.
+
+5. **Fully Connected Layers**: The flattened features are passed through fully connected dense layers. The first dense layer consists of 64 neurons with a ReLU activation function, which helps introduce non-linearity into the model. The final dense layer has 3 neurons corresponding to the output classes (Early blight, Late blight, and Healthy) with a softmax activation function, which outputs probabilities for each class.
+
+6. **Compilation**: The model is compiled using the Adam optimizer, which is an efficient variant of stochastic gradient descent. The loss function used is sparse categorical cross-entropy, suitable for multi-class classification tasks with integer labels. The model's performance is evaluated during training using the accuracy metric.
+
+This model architecture aims to effectively capture and classify features from input potato images, enabling accurate detection of various diseases.
 
 ## Usage
 
